@@ -13,11 +13,16 @@ export const useForm = ( initialForm = {} ) => {
             [name]: value
         });
     }
+
+    const onResetForm = () => {
+        setFormState(initialForm);
+    }
     
     // regresar el form desestructurado, el form y la funcion para cambiar
     return {
         ...formState,
         formState,
-        onInputChange
+        onInputChange,
+        onResetForm
     }
 }
