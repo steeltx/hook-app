@@ -3,7 +3,7 @@ import { todoReducer } from "../08-useReducer/todoReducer";
 
 // cuando carga el reducer, intentar obtener los datos desde el local storage
 const init = () => {
-    return JSON.parse(localStorage.getItem('todos') || [] );
+    return JSON.parse(localStorage.getItem('todos')) || [];
 }
 
 export const useTodos = () => {
